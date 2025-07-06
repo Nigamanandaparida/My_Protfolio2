@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section" id="hero">
+  <div class="section-content">
+    <div class="about-text">
+      <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Hi, I'm <span style="color: var(--primary);">Nigamananda Parida</span></h1>
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Full Stack Java developer</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">I create beautiful, functional, and responsive websites that help businesses grow and succeed online.</p>
+      <div style="display: flex; gap: 1rem;">
+        <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+        <a href="{{ url_for('contact') }}" class="btn" style="background-color: transparent; color: var(--primary); border: 2px solid var(--primary);">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services  <h2 class="section-title">My Services</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: var(--transition);">
+      <i class="fas fa-laptop-code" style="font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+      <h3 style="margin-bottom: 1rem;">Web Development</h3>
+      <p>Creating responsive and user-friendly websites using the latest technologies and best practices.</p>
+    </div>
+    
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: var(--transition);">
+      <i class="fas fa-paint-brush" style="font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+      <h3 style="margin-bottom: 1rem;">UI/UX Design</h3>
+      <p>Designing intuitive and engaging user interfaces that provide exceptional user experiences.</p>
+    </div>
+    
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: var(--transition);">
+      <i class="fas fa-mobile-alt" style="font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+      <h3 style="margin-bottom: 1rem;">Responsive Design</h3>
+      <p>Ensuring websites look and function perfectly across all devices, from desktops to smartphones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="latest-projects">
+  <h2 class="section-title">Latest Projects</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ url_for('static',filename='images/E-Commerce.jpeg')}}" alt="Project 1">
+      </div>
+      <div class="project-info">
+        <h3>E-commerce Website</h3>
+        <p>A fully responsive e-commerce platform with product filtering, cart functionality, and secure checkout.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Flask</span>
+          <span class="project-tag">Jinja2</span>
+        </div>
+        <a href="{{ url_for('projects') }}" class="project-link">View Project</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ url_for('static',filename='images/portfolio-template.jpeg')}}" alt="Project 2">
+      </div>
+      <div class="project-info">
+        <h3>Portfolio Template</h3>
+        <p>A customizable portfolio template for creative professionals to showcase their work and skills.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <a href="{{ url_for('projects') }}" class="project-link">View Project</a>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ url_for('projects') }}" class="btn">View All Projects</a>
+  </div>
+</section>
+{% endblock %}
