@@ -1,2 +1,2 @@
-# My_Protfolio2
-personal  project
+My personal details are present in this protfolio 
+
